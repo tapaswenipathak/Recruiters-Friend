@@ -45,7 +45,7 @@ mine-navigation
 /*==============================
 mine-Header
 ===============================*/
-header {
+header,footer {
     text-align: center;
     color: #fff;
     background: #ff1f48;
