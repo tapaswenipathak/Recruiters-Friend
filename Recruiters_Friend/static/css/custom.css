@@ -87,3 +87,24 @@ header .intro-text .skills {
         font-size: 1.75em;
     }
 }
+
+/*======================================
+Mine pannel
+=======================================*/
+.panel-custom {
+  border-color: #B20000;
+}
+.panel-custom > .panel-heading {
+  color: #fff;
+  background-color: #ff1f48;
+  border-color: #B20000;
+}
+.panel-custom > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #B20000;
+}
+.panel-custom > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #B20000;
+}
+.panel-custom > .panel-body,.panel-footer {
+    color: #B20000;
+}
