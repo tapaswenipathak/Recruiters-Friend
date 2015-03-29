@@ -1,101 +1,77 @@
 {% extends "base.html" %}
+{% load staticfiles%}    
 {% block content %}
-        <!-- after headerBody Starts -->
-        <div>
-            <div id="page-inner">
-                <div class="row">
-                    <div class="col-md-12">
-                     <h2 style="color:#ff1f48"> <center> Features </center> </h2>   
-                    </div>
-                </div>
-                 <!-- /. ROW  -->
-                 <hr />
-                                 
+<!-- features Grid Section -->
+    <section id="features">
+        <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-4">
-                    <div class="panel panel-custom">
-                        <div class="panel-heading">
-                            Default Panel
-                        </div>
-                        <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="panel panel-custom">
-                        <div class="panel-heading">
-                            Primary Panel
-                        </div>
-                        <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="panel panel-custom">
-                        <div class="panel-heading">
-                            Success Panel
-                        </div>
-                        <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
+                <div class="col-lg-12 text-center">
+                    <h2>features</h2>
+                    <hr class="star-primary">
                 </div>
             </div>
-                   <!-- /. ROW  -->
             <div class="row">
-                <div class="col-md-4 col-sm-4">
-                    <div class="panel panel-custom">
-                        <div class="panel-heading">
-                            Info Panel
+                <div class="col-sm-4 features-item">
+                    <a href="http://google.com" class="features-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
                         </div>
-                        <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
+                        <img src="{% static "img/features/cabin.png"%}" class="img-responsive" alt="">
+                    </a>
                 </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="panel panel-custom">
-                        <div class="panel-heading">
-                            Warning Panel
+                <div class="col-sm-4 features-item">
+                    <a href="#featuresModal2" class="features-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
                         </div>
-                        <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
+                        <img src="{% static "img/features/cake.png"%}" class="img-responsive" alt="">
+                    </a>
                 </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="panel panel-custom">
-                        <div class="panel-heading">
-                            Danger Panel
+                <div class="col-sm-4 features-item">
+                    <a href="#featuresModal3" class="features-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
                         </div>
-                        <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                        <img src="{% static "img/features/circus.png"%}" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 features-item">
+                    <a href="#featuresModal4" class="features-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
                         </div>
-                        <div class="panel-footer">
-                            Panel Footer
+                        <img src="{% static "img/features/game.png"%}" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 features-item">
+                    <a href="#featuresModal5" class="features-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
                         </div>
-                    </div>
+                        <img src="{% static "img/features/safe.png"%}" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 features-item">
+                    <a href="#featuresModal6" class="features-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{% static "img/features/submarine.png"%}" class="img-responsive" alt="">
+                    </a>
                 </div>
             </div>
         </div>
-             
-            </div>
-         <!-- after header body ends  -->
+    </section>
 {% endblock %}
