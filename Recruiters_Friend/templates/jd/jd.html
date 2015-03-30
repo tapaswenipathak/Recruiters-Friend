@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>	
+<head>
+	<link rel="stylesheet" href="{{STATIC_URL}}css/bootstrap.css">
+</head>
+
+<body>
+	<form id="form_1" action="/rating/" method="POST">
+		{% csrf_token %}
+<label for="job_description">Job description</label>
+	<textarea rows="12" cols="120" id="job_description"></textarea>	
+	<button type='submit' id='submit'>Done</button>
+	<div id="jd_description_append"></div>
+	<div id="rating"></div>
+	<div id="suggestions"></div>
+</form>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/main.js"></script>
+	</body>
+
+</html>
