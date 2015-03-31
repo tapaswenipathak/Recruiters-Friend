@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from jd.views import base, rating_calculation, questionnaire 
+from jd.views import base, rating_calculation, questionnaire, candidates
 
 urlpatterns = patterns('',
     # Examples:
