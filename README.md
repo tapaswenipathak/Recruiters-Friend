@@ -45,10 +45,10 @@ python manage.py runserver
 ## Features
 ### Currently Implemented
 
-* Improve your Job Description(JD) -> Enter your jd and get rating out of 10.
-* Get a questionnaire of some common questions.
-* Get Tips for recruting well.
-* Get candidates recommendation from Quora, Linkedin, github, twitter who are top hackers of the technology you want your employee to work on.
+* Know how good is your JD(Job Description)? Get a rating out of 10 suggestion!
+* Get a questionare, having must ask question, send it to the candidate!
+* Get Tips, suggestions, know do and don't while recruiting someone!
+* Enter technologies you are looking for and get all suitable candidates from Quora, Linkedin, GitHub, Stackoverflow e.t.c.
 
 
 ## Contributing
