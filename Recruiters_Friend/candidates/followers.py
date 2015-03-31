@@ -1,7 +1,5 @@
-import urllib2
-from bs4 import BeautifulSoup
-import feedparser
-import re
+import requests
+from pattern import web
 
 
 
@@ -11,11 +9,18 @@ import re
 
 def  get_some_followers (topic) :
 	url = "http://www.quora.com/" + topic + "/followers"
-	html_doc = urllib2.urlopen (url)
-	soup = BeautifulSoup (html_doc.read ())
-	raw_data = str (soup.find_all ('a',class_='user'))
-	soup = BeautifulSoup (raw_data)
-	name = soup.get_text ()
-	print type (name)
-	return topic, name
-	
+	users = get_user_details(url)
+	#print "from get_some_followers ", topic, users
+	return topic, users
+
+def get_user_details(url):
+	print(url)
+	r = requests.get(url)
+	html = r.text
+	dom = web.Element(html)
+	users = {}
+	for a in dom.by_class("user"):
+		if a.attrs.has_key(u'href'):
+			#print(a.attrs[u'href'])
+			users["http://www.quora.com"+a.attrs[u'href']] = a.content
+	return users
