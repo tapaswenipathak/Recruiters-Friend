@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load staticfiles%}   
+{% block title %}
+	Get Candidate List!
+{% endblock %} 
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 style="color:#ffa133;">Get Candidate List!</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+
+        <div class="row">
+        	<form id="form_1" action="/api_call/" method="GET">
+				{% csrf_token %}
+				<textarea id="candidate_list" class="form-control" rows="6" placeholder="Enter the technologies you are looking for." style="color:black;"></textarea>		
+				<br/>	
+				<button type="submit" id='submit' class="btn btn-primary btn-lg btn-block">Done</button>		
+				<div id="jd_description_append"></div>
+				<div id="topic"></div>
+				<div id="names"></div>
+			</form>
+			<br/>
+        </div>
+    </div>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/main1.js"></script>
+{% endblock %}
