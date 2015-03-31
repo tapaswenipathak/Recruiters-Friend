@@ -9,7 +9,6 @@ $(document).ready(function(){
 function data_validation() {
 
     var data_to_validate=$("textarea#job_description").val();
-    alert(data_to_validate);
 
     console.log("data send is working!"); // sanity check
    $.ajax({
