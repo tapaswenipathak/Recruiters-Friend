@@ -16,5 +16,6 @@ def  get_some_followers (topic) :
 	raw_data = str (soup.find_all ('a',class_='user'))
 	soup = BeautifulSoup (raw_data)
 	name = soup.get_text ()
+	print type (name)
 	return topic, name
 	

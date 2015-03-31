@@ -1,5 +1,4 @@
-BeautifulSoup==3.2.1
-Django==1.7.7
+Django==1.7
 argparse==1.2.1
 beautifulsoup4==4.3.2
 feedparser==5.1.3
