@@ -15,11 +15,14 @@
         <div class="row">
         	<form id="form_1" action="/rating/" method="POST">
 				{% csrf_token %}
-				<textarea id="job_description" class="form-control" rows="3" placeholder="Enter your job description here!"></textarea>			<button type="submit" id='submit' class="btn btn-primary btn-lg btn-block">Done</button>		
+				<textarea id="job_description" class="form-control" rows="3" placeholder="Enter your job description here!"></textarea>		
+				<br/>	
+				<button type="submit" id='submit' class="btn btn-primary btn-lg btn-block">Done</button>		
 				<div id="jd_description_append"></div>
 				<div id="rating"></div>
 				<div id="suggestions"></div>
 			</form>
+			<br/>
         </div>
     </div>	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
