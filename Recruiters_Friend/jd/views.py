@@ -15,3 +15,6 @@ def rating_calculation(request):
 	rating=round(float(count)/8*10,1)
 	response_data={'rating':rating, 'suggestions':absent}
 	return HttpResponse(json.dumps(response_data),content_type="application/json")
+
+def questionnaire(request):
+	return render(request,'questions.html')
