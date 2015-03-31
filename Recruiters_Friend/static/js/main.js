@@ -7,7 +7,6 @@ $(document).ready(function(){
 });
 
 function data_validation() {
-
     var data_to_validate=$("textarea#job_description").val();
 
     console.log("data send is working!"); // sanity check
@@ -19,8 +18,13 @@ function data_validation() {
         success : function(json) {
             console.log(json); // log the returned json to the console ; to be removed later
             console.log("success");
-            $('div#rating').html("<p> Rating :"+json['rating']+"</p>"); 
-            $('div#suggestions').html("<p>Suggestions : Add "+ json['suggestions'].toString()+" to improve your Job description");
+            $('div#rating').html("<p> Rating :"+json['rating']+"/10 </p>"); 
+            $('div#suggestions').append("<p>Add the following to improve your job description</p><ul>");
+            for( var i =  0 ; i < json['suggestions'].length ; ++i){
+                $('div#suggestions').append("<li>"+json['suggestions'][i]+"</li>");
+    }
+            $('div#suggestions').append("</ul>");
+            
              // another sanity check
         },
 

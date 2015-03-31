@@ -19,8 +19,8 @@ function data_validation() {
         success : function(json) {
             console.log(json); // log the returned json to the console ; to be removed later
             console.log("success");
-            $('div#topic').html("<p> Topic :"+json['topic']+"</p>"); 
-            $('div#names').html("<p>Names : "+ json['names'].toString());
+            $('div#topic').html("<p> Topic: "+json['topic']+"</p>"); 
+            $('div#names').html("<p>Names: "+ json['names'].toString()+"</p>");
              // another sanity check
         },
 
