@@ -17,13 +17,14 @@ function data_validation() {
         data : { candidates : data_to_validate}, // data sent with the post request
         // handle a successful response
         success : function(json) {
-            console.log(json); // log the returned json to the console ; to be removed later
-            console.log("success");
+            var name= (json['names']).replace("[","").replace("]","").split(',');
             $('div#topic').html("<p> Topic: "+json['topic']+"</p>"); 
-            $('div#names').html("<p>Names: "+ json['names'].toString()+"</p>");
-             // another sanity check
+            $('div#names').append("<p>Top ones in the field</p><ul>");
+            for( var i =  0 ; i < name.length-3 ; ++i){
+                $('div#names').append("<li>"+name[i+3]+"</li>");
+    }
+            $('div#names').append("</ul>");
         },
-
         // handle a non-successful response
         error : function(xhr,errmsg,err) {
             $('body').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
