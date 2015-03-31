@@ -1,18 +1,20 @@
 $(document).ready(function(){
 	$('button#submit').click(function(event){
 		event.preventDefault();
-		$("div#jd_description_append").html($('textarea').val());// this can be removed (uselessly added)
-		data_validation();
+		//$("div#jd_description_append").html($('textarea').val());// this can be removed (uselessly added)
+        data_validation();
 	});
 });
 
 function data_validation() {
-    var data_to_validate=$('textarea').val();
+
+    var data_to_validate=$("textarea#job_description").val();
+    alert(data_to_validate);
 
     console.log("data send is working!"); // sanity check
    $.ajax({
         url : "/rating/", // the endpoint
-        type : "POST", // http method
+        type : "GET", // http method
         data : { jd : data_to_validate}, // data sent with the post request
         // handle a successful response
         success : function(json) {
