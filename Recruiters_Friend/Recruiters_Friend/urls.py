@@ -8,9 +8,9 @@ urlpatterns = patterns('',
     url(r'^about/', 'common.views.about', name='about'),
     url(r'^jd/', base),
     url(r'^rating/', rating_calculation),
-    url(r'^questions/',questionnaire), # just link it with the index page
-    # url(r'^blog/', include('blog.urls')),
-
+    url(r'^questions/',questionnaire),
+    url(r'^candidates/', candidates),
+    
     url(r'^admin/', include(admin.site.urls)),
 
 )

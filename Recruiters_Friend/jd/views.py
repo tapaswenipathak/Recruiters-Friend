@@ -18,3 +18,6 @@ def rating_calculation(request):
 
 def questionnaire(request):
 	return render(request,'questions.html')
+
+def candidates(request):
+	return render(request, 'candidates.html')
