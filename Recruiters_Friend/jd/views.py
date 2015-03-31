@@ -10,7 +10,6 @@ def base(request):
 
 def rating_calculation(request):
 	data=request.GET.get('jd')
-	print "hello",data
 	count, absent = string_matching.find_words(data)
 	rating=round(float(count)/8*10,1)
 	response_data={'rating':rating, 'suggestions':absent}
@@ -21,3 +20,6 @@ def questionnaire(request):
 
 def candidates(request):
 	return render(request, 'candidates.html')
+
+def suggestions(request):
+	return render(request, 'suggestions.html')
